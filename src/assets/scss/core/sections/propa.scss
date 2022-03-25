@@ -1,0 +1,37 @@
+.propa {
+
+	.section-inner {
+		padding-top: $propa--padding-t__mobile;
+		padding-bottom: $propa--padding-b__mobile;
+	}
+}
+
+.propa-slogan {
+	margin-bottom: $propa-slogan--padding-v__mobile;
+}
+
+@include media( '>medium' ) {
+
+	.propa {
+
+		.section-inner {
+			padding-top: $propa--padding-t__desktop;
+			padding-bottom: $propa--padding-b__desktop;
+		}
+	}
+
+	.propa-split {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.propa-slogan {
+		margin-bottom: $propa-slogan--padding-v__desktop;
+
+		.propa-split & {
+			margin-bottom: 0;
+			margin-right: $propa-slogan--padding-h__desktop;
+		}
+	}
+}

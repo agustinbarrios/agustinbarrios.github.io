@@ -1,0 +1,32 @@
+.propa {
+
+    .form-input {
+        border-color: transparent;
+        border-radius: 2px;
+    }
+}
+
+.propa-inner {
+	padding-left: 16px;
+	padding-right: 16px;
+    background-color: get-color(primary, 3);
+	background-image: url(../../../images/propa1.png);
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right bottom;    
+}
+
+@include media( '>medium' ) {
+
+.propa {
+
+    .form-input {
+        min-width: 280px;
+    }
+}    
+
+	.propa-inner {
+		padding-left: 48px;
+		padding-right: 48px;
+	}
+}

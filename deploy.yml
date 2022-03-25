@@ -1,0 +1,27 @@
+name: open-react-template
+on:
+ push: 
+   branches:
+     - main
+     jobs:
+ deploy:
+  name: deploy app
+  runs-on: ubuntu-latest
+  strategy:
+   matrix:
+    node-version: [ "12.x" ]
+    steps:
+  - uses: actions/checkout@v2
+  - uses: actions/setup-node@v1 
+    with:
+      node-version: ${{matrix.node-version}}
+      - name: install packages
+  run: npm install
+  - name: registry github user
+  run: |
+    git config --global user.email <agustin-em@hotmail.com.ar>
+    git config --global user.name <agustinbarrios>
+    - name: open-react-template
+  run: npm run deploy
+  env:
+   Prueba: ${{ secrets.Prueba }}
